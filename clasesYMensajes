@@ -1,0 +1,63 @@
+CLASE CLUB
+
+SubClase de : Object 
+ variables de instancia : 'nombre socios canchas clientes reservas'
+
+Metodo de clase
+
+>> creaClubNombre:unNombre
+"Retorna una instancia del club inicializada"
+	^(self new) iniciarClubNombre: unNombre 
+
+
+Metodos de instancia: 
+
+>> iniciarClubNombre: unNombre "Inicializa una instancia del club"	
+	nombre:= unNombre.
+	socios:=OrderedCollection new.
+	canchas:=OrderedCollection new.
+	reservas:=Dictionary new.
+
+
+>>verSocios "retorna lista de socios"
+	^socios.  
+
+
+CLASE CANCHA
+
+SubClase de : Object 
+ variables de instancia : 'numero tamanio estado precio'
+
+	Metodo de clase
+
+>> creaClubNumero: unNumero "Retorna una instancia del cancha inicializada"
+
+	^(self new) iniciarCanchaNumero: unNumero 
+
+
+	Metodos de instancia: 
+
+>> iniciarCanchaNumero: unNumero "Inicializa una instancia del cancha"	
+	numero:=unNumero.
+	tamanio:= 5.
+	estado:= false.
+	precio:=400
+	
+
+
+>>consultarTamanio
+^tamanio.
+
+>>consultarNumero
+^numero.
+
+>>consultarPrecio
+^precio.
+
+>>verEstado
+^estado.
+
+>>cambiarEstado
+(estado = true) ifTrue[self estado:=false]
+				ifFalse[self estado:=true].
+
