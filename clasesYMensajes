@@ -41,9 +41,13 @@ SubClase de : Object
 	numero:=unNumero.
 	tamanio:= 5.
 	estado:= false.
-	precio:=400
+	precio:=400.
 	
-
+>> reservarCancha: "pseudocodigo"
+	existe cliente?
+	es moroso? --> si es moroso cobrar cuota antes de seguir la operacion
+	no es moroso--> preguntar que dia y horario quiere pedir.
+	para cada cancha (si estado = false)
 
 >>consultarTamanio
 ^tamanio.
