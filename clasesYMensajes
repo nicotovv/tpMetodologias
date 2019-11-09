@@ -59,5 +59,7 @@ SubClase de : Object
 
 >>cambiarEstado
 (estado = true) ifTrue[self estado:=false]
-				ifFalse[self estado:=true].
+		ifFalse[self estado:=true].
+		
+CLASE CLIENTE
 
